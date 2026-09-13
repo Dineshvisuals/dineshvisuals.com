@@ -1,281 +1,1300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dinesh Visuals</title>
+<title>Dinesh Visuals | Cinematic Video Editing</title>
+
+<meta name="description"
+content="Dinesh Visuals - Professional video editing, cinematic films, reels, social media content and visual storytelling.">
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #f1eadc;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-header {
-    padding: 22px;
-    text-align: center;
-    background: #050505;
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+
+    background: rgba(8,8,8,0.96);
+
+    border-bottom: 1px solid #25221d;
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 21px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    color: #f1eadc;
 }
 
 .logo span {
-    color: #e50914;
+    color: #c6a15b;
 }
 
-.photo {
-    width: 100%;
-    height: 65vh;
-    overflow: hidden;
-    background: #000;
+.nav-links {
+    display: flex;
+    gap: 28px;
 }
 
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.intro {
-    text-align: center;
-    padding: 55px 20px;
-}
-
-.small {
-    color: #e50914;
+.nav-links a {
+    color: #aaa49a;
     font-size: 13px;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-h1 {
-    font-size: 52px;
-    line-height: 1;
+.nav-links a:hover {
+    color: #c6a15b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 70px 7% 100px;
+
+    text-align: center;
+}
+
+
+/* IMAGE */
+
+.hero-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 520px;
+    height: 310px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    border: 1px solid #3a3020;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.65);
+
+    opacity: 0.95;
+}
+
+
+/* HERO TEXT */
+
+.hero-small {
+    color: #c6a15b;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
     margin-bottom: 22px;
 }
 
-h1 span {
-    color: #e50914;
+.hero h1 {
+    font-size: clamp(48px, 8vw, 92px);
+
+    line-height: 0.95;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+
+    font-weight: 700;
 }
 
-.description {
-    max-width: 600px;
-    margin: auto;
-    color: #aaa;
-    font-size: 17px;
-    line-height: 1.7;
+.hero h1 span {
+    color: #c6a15b;
 }
+
+.hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #aaa49a;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons {
-    margin-top: 30px;
+    margin-top: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
 }
 
-.button {
-    display: block;
-    max-width: 350px;
-    margin: 12px auto;
-    padding: 17px;
-    border-radius: 5px;
-    text-decoration: none;
+.btn {
+    display: inline-block;
+
+    padding: 14px 26px;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+
     font-weight: bold;
-    font-size: 16px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
 }
 
-.whatsapp {
-    background: #e50914;
-    color: white;
+.primary {
+    background: #c6a15b;
+
+    color: #080808;
 }
 
-.work {
-    border: 1px solid #777;
-    color: white;
+.primary:hover {
+    background: #dfc27b;
+
+    transform: translateY(-2px);
 }
+
+.secondary {
+    border: 1px solid #c6a15b;
+
+    color: #c6a15b;
+
+    background: transparent;
+}
+
+.secondary:hover {
+    background: #c6a15b;
+
+    color: #080808;
+}
+
+.dark-button {
+    border: 1px solid #37342f;
+
+    color: #f1eadc;
+
+    background: #11110f;
+}
+
+.dark-button:hover {
+    border-color: #c6a15b;
+
+    color: #c6a15b;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
-    padding: 70px 20px;
-    background: #090909;
+    padding: 100px 7%;
+
+    border-top: 1px solid #1d1b18;
 }
 
-h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 35px;
-}
+.section-container {
+    max-width: 1200px;
 
-h2 span {
-    color: #e50914;
-}
-
-.cards {
-    max-width: 900px;
     margin: auto;
 }
 
-.card {
-    background: #111;
-    border: 1px solid #222;
-    padding: 25px;
-    margin-bottom: 15px;
-    border-radius: 6px;
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
 }
 
-.card h3 {
-    margin-bottom: 8px;
+.section-heading .small {
+    color: #c6a15b;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    display: block;
+
+    margin-bottom: 12px;
 }
 
-.card p {
-    color: #999;
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 52px);
+
+    letter-spacing: 2px;
 }
+
+.section-heading h2 span {
+    color: #c6a15b;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    background: #10100f;
+
+    border: 1px solid #28251f;
+
+    padding: 38px 30px;
+
+    min-height: 220px;
+
+    transition: 0.35s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #c6a15b;
+}
+
+.service-number {
+    color: #c6a15b;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 13px;
+
+    color: #f1eadc;
+}
+
+.service-card p {
+    color: #918d84;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.portfolio-card {
+    min-height: 300px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #191815,
+            #0c0c0b
+        );
+
+    border: 1px solid #292722;
+
+    transition: 0.35s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c6a15b;
+}
+
+.portfolio-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 25px;
+
+    width: 40px;
+
+    height: 2px;
+
+    background: #c6a15b;
+}
+
+.portfolio-card h3 {
+    font-size: 27px;
+
+    margin-bottom: 7px;
+
+    position: relative;
+}
+
+.portfolio-card p {
+    color: #918d84;
+
+    font-size: 13px;
+
+    position: relative;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    background: #0b0b0a;
+}
+
+.about-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.about-content p {
+    color: #aaa49a;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.process-step {
+    text-align: center;
+
+    padding: 25px 15px;
+}
+
+.process-number {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 22px;
+
+    border: 1px solid #c6a15b;
+
+    border-radius: 50%;
+
+    color: #c6a15b;
+
+    font-size: 13px;
+}
+
+.process-step h3 {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.process-step p {
+    color: #858078;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #10100e,
+            #080808
+        );
+}
+
+.contact-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.contact-content h2 {
+    font-size: clamp(38px, 6vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.contact-content h2 span {
+    color: #c6a15b;
+}
+
+.contact-content p {
+    color: #918d84;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+.contact-options {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================
+   EMAIL BOX
+========================= */
+
+.email-box {
+    margin-top: 30px;
+
+    color: #aaa49a;
+
+    font-size: 14px;
+}
+
+.email-box a {
+    color: #c6a15b;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    padding: 30px;
     text-align: center;
-    color: #777;
-    background: #000;
+
+    padding: 30px 20px;
+
+    border-top: 1px solid #1d1b18;
+
+    color: #66625c;
+
+    font-size: 12px;
 }
 
 footer span {
-    color: #e50914;
+    color: #c6a15b;
 }
 
-@media (max-width: 600px) {
 
-    .photo {
-        height: 55vh;
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 18px 5%;
     }
 
-    h1 {
-        font-size: 45px;
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 45px 5% 75px;
+    }
+
+    .hero-image {
+        max-width: 430px;
+
+        height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    section {
+        padding: 75px 5%;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .process {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 }
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        height: 220px;
+    }
+
+    .hero-small {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .process {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<header>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
     <div class="logo">
         DINESH <span>VISUALS</span>
     </div>
-</header>
 
-<div class="photo">
-    <img src="avatar.png" alt="Dinesh Visuals">
-</div>
+    <div class="nav-links">
 
-<div class="intro">
+        <a href="#services">
+            SERVICES
+        </a>
 
-    <div class="small">
+        <a href="#portfolio">
+            WORK
+        </a>
+
+        <a href="#about">
+            ABOUT
+        </a>
+
+        <a href="#contact">
+            CONTACT
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-image-container">
+
+        <img
+            src="avatar.png"
+            alt="Dinesh Visuals"
+            class="hero-image"
+        >
+
+    </div>
+
+
+    <div class="hero-small">
         VIDEO EDITING • CONTENT • VISUALS
     </div>
 
+
     <h1>
-        WE CREATE<br>
+        WE CREATE
+        <br>
         <span>VISUAL STORIES.</span>
     </h1>
 
-    <p class="description">
-        Cinematic video editing and creative content designed
-        to make your story, brand and ideas impossible to ignore.
+
+    <p class="hero-description">
+
+        Cinematic video editing and content creation
+        crafted to make your story memorable,
+        powerful and visually distinctive.
+
     </p>
+
 
     <div class="buttons">
 
         <a
-        class="button whatsapp"
-        href="https://wa.me/919100725435"
-        target="_blank">
-        GET A QUOTE ON WHATSAPP
+            href="https://wa.me/919100725435"
+            target="_blank"
+            class="btn primary"
+        >
+            WHATSAPP
         </a>
 
+
         <a
-        class="button work"
-        href="#services">
-        VIEW OUR SERVICES
+            href="mailto:contact@dineshvisuals.com"
+            class="btn secondary"
+        >
+            EMAIL US
+        </a>
+
+
+        <a
+            href="tel:+919100725435"
+            class="btn dark-button"
+        >
+            CALL NOW
         </a>
 
     </div>
 
-</div>
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services">
 
-    <h2>
-        OUR <span>SERVICES</span>
-    </h2>
+    <div class="section-container">
 
-    <div class="cards">
+        <div class="section-heading">
 
-        <div class="card">
-            <h3>Video Editing</h3>
-            <p>
-                Professional video editing, storytelling,
-                transitions and sound design.
-            </p>
+            <span class="small">
+                WHAT WE DO
+            </span>
+
+            <h2>
+                OUR <span>SERVICES</span>
+            </h2>
+
         </div>
 
-        <div class="card">
-            <h3>Reels & Shorts</h3>
-            <p>
-                Engaging Instagram Reels and YouTube Shorts
-                for creators and businesses.
-            </p>
-        </div>
 
-        <div class="card">
-            <h3>Film Editing</h3>
-            <p>
-                Cinematic editing for films, short films
-                and creative projects.
-            </p>
-        </div>
+        <div class="services">
 
-        <div class="card">
-            <h3>Wedding & Events</h3>
-            <p>
-                Cinematic wedding and event highlight videos.
-            </p>
-        </div>
 
-        <div class="card">
-            <h3>Color Grading</h3>
-            <p>
-                Professional color correction and cinematic
-                color grading.
-            </p>
-        </div>
+            <div class="service-card">
 
-        <div class="card">
-            <h3>Brand Content</h3>
-            <p>
-                Promotional videos and social media content
-                for brands and businesses.
-            </p>
+                <div class="service-number">
+                    01 / EDIT
+                </div>
+
+                <h3>
+                    Video Editing
+                </h3>
+
+                <p>
+                    Professional editing for YouTube,
+                    Instagram, creators, businesses
+                    and digital content.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    02 / SOCIAL
+                </div>
+
+                <h3>
+                    Reels & Shorts
+                </h3>
+
+                <p>
+                    Engaging short-form content designed
+                    for Instagram Reels, YouTube Shorts
+                    and social platforms.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    03 / CINEMA
+                </div>
+
+                <h3>
+                    Cinematic Editing
+                </h3>
+
+                <p>
+                    Cinematic pacing, transitions,
+                    sound design and storytelling
+                    for a premium visual experience.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    04 / FILM
+                </div>
+
+                <h3>
+                    Film Editing
+                </h3>
+
+                <p>
+                    Short films and movie editing
+                    focused on emotion, story structure
+                    and visual flow.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    05 / COLOR
+                </div>
+
+                <h3>
+                    Color Grading
+                </h3>
+
+                <p>
+                    Professional color correction
+                    and cinematic grading to create
+                    a distinctive visual identity.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    06 / EVENTS
+                </div>
+
+                <h3>
+                    Wedding & Events
+                </h3>
+
+                <p>
+                    Emotional wedding films, event videos
+                    and memorable highlights crafted
+                    with cinematic storytelling.
+                </p>
+
+            </div>
+
+
         </div>
 
     </div>
 
 </section>
 
+
+
+<!-- =========================
+     PORTFOLIO
+========================= -->
+
+<section id="portfolio">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="small">
+                SELECTED WORK
+            </span>
+
+            <h2>
+                THE <span>PORTFOLIO</span>
+            </h2>
+
+        </div>
+
+
+        <div class="portfolio">
+
+
+            <div class="portfolio-card">
+
+                <h3>
+                    Cinematic Film
+                </h3>
+
+                <p>
+                    Short Film / Movie Editing
+                </p>
+
+            </div>
+
+
+
+            <div class="portfolio-card">
+
+                <h3>
+                    Social Stories
+                </h3>
+
+                <p>
+                    Instagram Reels / YouTube Shorts
+                </p>
+
+            </div>
+
+
+
+            <div class="portfolio-card">
+
+                <h3>
+                    Brand Films
+                </h3>
+
+                <p>
+                    Promotional & Commercial Videos
+                </p>
+
+            </div>
+
+
+
+            <div class="portfolio-card">
+
+                <h3>
+                    Wedding Stories
+                </h3>
+
+                <p>
+                    Wedding Films / Highlights
+                </p>
+
+            </div>
+
+
+
+            <div class="portfolio-card">
+
+                <h3>
+                    Creator Content
+                </h3>
+
+                <p>
+                    YouTube / Personal Branding
+                </p>
+
+            </div>
+
+
+
+            <div class="portfolio-card">
+
+                <h3>
+                    Visual Effects
+                </h3>
+
+                <p>
+                    VFX / Creative Editing
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="about-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="small">
+                THE STUDIO
+            </span>
+
+            <h2>
+                ABOUT <span>DINESH VISUALS</span>
+            </h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p>
+                Dinesh Visuals is a creative video editing
+                and content production studio focused on
+                turning raw footage into meaningful visual stories.
+            </p>
+
+            <p>
+                Whether it's a cinematic film, social media
+                reel, wedding highlight or brand video,
+                every project is approached with attention
+                to story, emotion and visual quality.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section>
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="small">
+                OUR APPROACH
+            </span>
+
+            <h2>
+                HOW WE <span>WORK</span>
+            </h2>
+
+        </div>
+
+
+        <div class="process">
+
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Discuss
+                </h3>
+
+                <p>
+                    Tell us about your idea,
+                    footage and requirements.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Plan
+                </h3>
+
+                <p>
+                    We understand the style,
+                    story and creative direction.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Create
+                </h3>
+
+                <p>
+                    Editing, sound, color and
+                    visual storytelling come together.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-step">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Deliver
+                </h3>
+
+                <p>
+                    Your final polished video
+                    is ready to share with the world.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="contact-content">
+
+        <h2>
+            LET'S CREATE
+            <span>TOGETHER.</span>
+        </h2>
+
+
+        <p>
+            Have a project, film, reel or brand idea?
+        </p>
+
+        <p>
+            Let's turn it into something worth watching.
+        </p>
+
+
+        <div class="contact-options">
+
+
+            <a
+                href="https://wa.me/919100725435"
+                target="_blank"
+                class="btn primary"
+            >
+                WHATSAPP US
+            </a>
+
+
+            <a
+                href="mailto:contact@dineshvisuals.com"
+                class="btn secondary"
+            >
+                EMAIL US
+            </a>
+
+
+            <a
+                href="tel:+919100725435"
+                class="btn dark-button"
+            >
+                CALL US
+            </a>
+
+
+        </div>
+
+
+        <div class="email-box">
+
+            Email:
+            <a href="mailto:contact@dineshvisuals.com">
+                contact@dineshvisuals.com
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    © 2026 <span>Dinesh Visuals</span>. All Rights Reserved.
+
+    © 2026 Dinesh
+    <span>Visuals</span>.
+    All Rights Reserved.
+
 </footer>
 
+
 </body>
-</html>
+    </html>
