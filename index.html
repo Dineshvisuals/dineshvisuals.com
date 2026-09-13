@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Dinesh Visuals | Video Editing & Content Creation</title>
 
-<meta name="description" content="Dinesh Visuals creates cinematic video edits, reels, shorts, social media content, films, weddings and promotional videos.">
+<meta name="description"
+content="Dinesh Visuals - Professional video editing, cinematic films, reels, shorts, weddings and creative content.">
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 *{
     margin:0;
@@ -18,29 +24,46 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
     background:#050505;
-    color:white;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
     line-height:1.6;
 }
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    padding:20px 7%;
+    height:72px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(10px);
+
+    padding:0 7%;
+
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
     z-index:1000;
 }
 
 .logo{
     font-size:22px;
-    font-weight:bold;
+    font-weight:800;
     letter-spacing:2px;
 }
 
@@ -48,79 +71,115 @@ nav{
     color:#e50914;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-size:14px;
+.nav-links{
+    display:flex;
+    gap:30px;
 }
 
-nav a:hover{
+.nav-links a{
+    font-size:14px;
+    color:#ccc;
+    transition:.3s;
+}
+
+.nav-links a:hover{
     color:#e50914;
 }
 
-/* HERO */
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding:120px 7% 70px;
-    position:relative;
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image{
+    width:100%;
+    height:78vh;
+    min-height:500px;
+
+    margin-top:72px;
+
     overflow:hidden;
 
-    background:
-    linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.48),rgba(0,0,0,.75)),
-    url("avatar.png");
-
-    background-size:cover;
-    background-position:center;
+    background:#000;
 }
+
+.hero-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    /*
+       Keeps the main subject visible
+       and reduces the right-side area.
+    */
+    object-position:42% center;
+
+    display:block;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
 
 .hero-content{
-    max-width:750px;
-    position:relative;
-    z-index:2;
+    padding:70px 7% 90px;
+
+    background:#050505;
+
+    text-align:center;
 }
 
-.small-title{
+.hero-label{
     color:#e50914;
-    font-size:14px;
-    letter-spacing:4px;
+
+    font-size:13px;
     font-weight:bold;
+
+    letter-spacing:4px;
+
     margin-bottom:20px;
 }
 
-h1{
+.hero-title{
     font-size:clamp(45px,8vw,90px);
-    line-height:1;
+
+    line-height:.95;
+
+    letter-spacing:-4px;
+
     margin-bottom:25px;
-    letter-spacing:-3px;
 }
 
-h1 span{
+.hero-title span{
     color:#e50914;
 }
 
-.hero p{
-    max-width:600px;
-    color:#ddd;
+.hero-description{
+    max-width:650px;
+
+    margin:0 auto 35px;
+
+    color:#aaa;
+
     font-size:18px;
-    margin-bottom:35px;
 }
 
 .buttons{
     display:flex;
+    justify-content:center;
     gap:15px;
     flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    padding:15px 25px;
+    padding:15px 28px;
+
     border-radius:4px;
-    text-decoration:none;
+
     font-weight:bold;
+
     transition:.3s;
 }
 
@@ -130,532 +189,5 @@ h1 span{
 }
 
 .primary:hover{
-    background:#ff2633;
-    transform:translateY(-3px);
-}
-
-.secondary{
-    border:1px solid #777;
-    color:white;
-}
-
-.secondary:hover{
-    border-color:#e50914;
-}
-
-/* SECTIONS */
-
-section{
-    padding:90px 7%;
-}
-
-.section-title{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.section-title span{
-    color:#e50914;
-}
-
-.section-subtitle{
-    color:#999;
-    max-width:650px;
-    margin-bottom:45px;
-}
-
-/* SERVICES */
-
-.services{
-    background:#090909;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.card{
-    background:#111;
-    border:1px solid #222;
-    padding:30px;
-    border-radius:8px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#e50914;
-}
-
-.card-number{
-    color:#e50914;
-    font-size:14px;
-    margin-bottom:20px;
-}
-
-.card h3{
-    font-size:23px;
-    margin-bottom:12px;
-}
-
-.card p{
-    color:#999;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-    background:#050505;
-}
-
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.work{
-    min-height:250px;
-    background:linear-gradient(135deg,#181818,#080808);
-    border:1px solid #222;
-    border-radius:8px;
-    display:flex;
-    align-items:flex-end;
-    padding:25px;
-    position:relative;
-    overflow:hidden;
-}
-
-.work:before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-    linear-gradient(transparent,rgba(0,0,0,.9));
-}
-
-.work-content{
-    position:relative;
-    z-index:2;
-}
-
-.work h3{
-    font-size:22px;
-}
-
-.work p{
-    color:#aaa;
-    font-size:14px;
-}
-
-/* ABOUT */
-
-.about{
-    background:#0b0b0b;
-}
-
-.about-box{
-    max-width:850px;
-}
-
-.about-box p{
-    color:#bbb;
-    font-size:18px;
-    margin-bottom:20px;
-}
-
-/* PROCESS */
-
-.process-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.step{
-    border-top:2px solid #e50914;
-    padding-top:20px;
-}
-
-.step-number{
-    color:#e50914;
-    font-size:14px;
-}
-
-.step h3{
-    margin:10px 0;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-    background:
-    linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.95)),
-    url("avatar.png");
-    background-size:cover;
-    background-position:center;
-}
-
-.contact p{
-    color:#aaa;
-    max-width:600px;
-    margin:0 auto 30px;
-}
-
-.contact-buttons{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:30px 7%;
-    background:#000;
-    color:#777;
-    font-size:14px;
-}
-
-footer span{
-    color:#e50914;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-    nav{
-        padding:18px 5%;
-    }
-
-    nav .links{
-        display:none;
-    }
-
-    .hero{
-        padding:120px 6% 70px;
-        background-position:center;
-    }
-
-    h1{
-        font-size:52px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    section{
-        padding:70px 6%;
-    }
-
-    .section-title{
-        font-size:34px;
-    }
-
-    .service-grid,
-    .portfolio-grid{
-        grid-template-columns:1fr;
-    }
-
-    .process-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-}
-
-@media(max-width:500px){
-
-    .process-grid{
-        grid-template-columns:1fr;
-    }
-
-    .buttons,
-    .contact-buttons{
-        flex-direction:column;
-    }
-
-    .btn{
-        text-align:center;
-    }
-
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-
-<nav>
-
-<div class="logo">
-DINESH <span>VISUALS</span>
-</div>
-
-<div class="links">
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="small-title">
-VIDEO EDITING • CONTENT • VISUALS
-</div>
-
-<h1>
-WE CREATE<br>
-<span>VISUAL STORIES.</span>
-</h1>
-
-<p>
-Cinematic video editing and creative content designed to make your story,
-brand and ideas impossible to ignore.
-</p>
-
-<div class="buttons">
-
-<a class="btn primary" href="#contact">
-GET A QUOTE
-</a>
-
-<a class="btn secondary" href="#portfolio">
-VIEW OUR WORK
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services" id="services">
-
-<h2 class="section-title">
-OUR <span>SERVICES</span>
-</h2>
-
-<p class="section-subtitle">
-Professional editing and visual content for creators, brands, events and filmmakers.
-</p>
-
-<div class="service-grid">
-
-<div class="card">
-<div class="card-number">01</div>
-<h3>Video Editing</h3>
-<p>
-Professional editing, pacing, transitions, sound design and storytelling.
-</p>
-</div>
-
-<div class="card">
-<div class="card-number">02</div>
-<h3>Reels & Shorts</h3>
-<p>
-Engaging Instagram Reels and YouTube Shorts designed for social media.
-</p>
-</div>
-
-<div class="card">
-<div class="card-number">03</div>
-<h3>Film Editing</h3>
-<p>
-Cinematic editing for short films, movies and creative projects.
-</p>
-</div>
-
-<div class="card">
-<div class="card-number">04</div>
-<h3>Wedding & Events</h3>
-<p>
-Emotional and cinematic wedding and event highlight videos.
-</p>
-</div>
-
-<div class="card">
-<div class="card-number">05</div>
-<h3>Color Grading</h3>
-<p>
-Professional cinematic color correction and creative color grading.
-</p>
-</div>
-
-<div class="card">
-<div class="card-number">06</div>
-<h3>Brand Content</h3>
-<p>
-Promotional videos and social media content for businesses and brands.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PORTFOLIO -->
-
-<section class="portfolio" id="portfolio">
-
-<h2 class="section-title">
-SELECTED <span>WORK</span>
-</h2>
-
-<p class="section-subtitle">
-A selection of our creative work. More projects coming soon.
-</p>
-
-<div class="portfolio-grid">
-
-<div class="work">
-<div class="work-content">
-<h3>Cinematic Films</h3>
-<p>Film & Storytelling</p>
-</div>
-</div>
-
-<div class="work">
-<div class="work-content">
-<h3>Social Media</h3>
-<p>Reels & Shorts</p>
-</div>
-</div>
-
-<div class="work">
-<div class="work-content">
-<h3>Events</h3>
-<p>Wedding & Highlights</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="about-box">
-
-<h2 class="section-title">
-ABOUT <span>DINESH VISUALS</span>
-</h2>
-
-<p>
-Dinesh Visuals is a creative video editing and content creation studio
-focused on turning ordinary footage into powerful visual stories.
-</p>
-
-<p>
-From cinematic films and social media reels to wedding highlights and
-brand videos, our goal is simple — make every frame matter.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- PROCESS -->
-
-<section>
-
-<h2 class="section-title">
-HOW IT <span>WORKS</span>
-</h2>
-
-<p class="section-subtitle">
-A simple process from your footage to the final visual story.
-</p>
-
-<div class="process-grid">
-
-<div class="step">
-<div class="step-number">01</div>
-<h3>Send Your Footage</h3>
-<p>Share your videos and project requirements.</p>
-</div>
-
-<div class="step">
-<div class="step-number">02</div>
-<h3>We Edit</h3>
-<p>We build the story, pacing and visual style.</p>
-</div>
-
-<div class="step">
-<div class="step-number">03</div>
-<h3>Review</h3>
-<p>You review the first version and share feedback.</p>
-</div>
-
-<div class="step">
-<div class="step-number">04</div>
-<h3>Final Delivery</h3>
-<p>Receive your finished video ready to publish.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2 class="section-title">
-LET'S CREATE <span>TOGETHER.</span>
-</h2>
-
-<p>
-Have a project in mind? Let's turn your idea into something people remember.
-</p>
-
-<div class="contact-buttons">
-
-<a class="btn primary" href="mailto:contact@dineshvisuals.com">
-EMAIL US
-</a>
-
-<a class="btn secondary" href="https://wa.me/91XXXXXXXXXX">
-WHATSAPP
-</a>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 <span>Dinesh Visuals</span>. All Rights Reserved.
-
-</footer>
-
-</body>
-</html>
+    background:#ff1b26;
+    transform:translateY(-
